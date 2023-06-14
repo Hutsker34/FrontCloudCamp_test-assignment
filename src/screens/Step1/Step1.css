@@ -225,3 +225,80 @@
 .first__ball{
     background-color: #fff;
 }
+
+
+
+@media only screen and (max-width: 1600px) {
+    
+    .progressbar__ball{
+        width: 22px;
+    }
+    .mainBlock--step1{
+        padding: 80px 140px 100px 140px;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    body{
+        background-color: #fff;
+    }
+    .site{
+        width: 100%;
+    }
+    .mainBlock--step1{
+        width: 100%;
+        padding: 0;
+    }
+    .progressbar{
+        padding: 0px 50px;
+    }
+    .mainBlock__article{
+        padding: 0 ;
+        margin-top: 40px;
+    }
+    .article__inputform{
+        padding: 0 50px;
+    }
+    .article__button {
+        margin: 0 50px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .article__inputform {
+        width: 100%;
+    }
+    .custom-select {
+        width: 100%;
+    }
+    .select-selected {
+        width: 100%;
+    }
+    .progressbar__ball{
+        height: 17px;
+        width: 17px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 7px solid #5558FA;
+    }
+    .second--ball{
+        height: 17px;
+        width: 17px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 7px solid #5558FA;
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    .mainBlock__article{
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .mainBlock__article{
+        margin-top: 30px;
+    }
+}

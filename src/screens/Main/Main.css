@@ -154,59 +154,138 @@ body{
     }
 }
 @media only screen and (max-width: 992px) {
-    .info__links--a{
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-    .info__links--img{
-        height: 30px;
-    }
-    .header__info--name{
-        font-size: 35px;
-    }
-    .header__logo{
-        margin-bottom: 0px;
-    }
-    .mainBlock__header{
-        align-items: center;
-    }
-    .article__label{
-        font-size: 30px;
-    }
-    .article__input{
-        width: 90%;
-        height: 40px;
-        font-size: 23px;
-    }
-    .article__inputform{
+    .App{
         width: 100%;
     }
-    .article__button{
-        font-size: 35px;
-    }
     .mainBlock{
-        padding-bottom: 449px;
+        width: 100%;
+        padding: 0%;
+        height: 100%;
     }
+    .info__links--img{
+        height: 18px;
+    }
+    .info__links--a a1{
+        font-size: 20px;
+    }
+    .header__info--name{
+        font-size: 22px;
+    }
+    .OS{
+        font-size: 43px;
+    }
+    .header__logo{
+        max-width: 70px;
+        max-height: 70px;
+    }
+    .mainBlock__article{
+        margin-top: 25px;
+        max-width: 80%;
+        margin-right: 0;
+        padding: 0 0 0 20px;
+        margin-top: 20px;
+    }
+    .article__input{
+        max-width: 80%;
+    }
+    body{
+        background-color: #fff;
+    }
+    .mainBlock__header{
+        padding-left: 20px;
+    }
+    
+}
+@media only screen and (max-width: 650px) {
+    .mainBlock__article{
+        margin-top: 30px;
+    }
+    .article__inputform{
+        max-width: 80%;
+    }
+    .article__input{
+        font-size: 12px;
+        height: 15px;
+    }
+    .article__label{
+        font-size: 14px;
+    }
+    .article__button{
+        font-size: 14px;
+    }
+    .header__logo{
+        max-width: 60px;
+        max-height: 60px;
+        
+    }
+    .OS{
+        font-size: 36px;
+    }
+    .header__info--name{
+        font-size: 20px;
+    }
+    .info__links--img{
+        height: 15px;
+    }
+    .info__links--a{
+        font-size: 14px;
+    }
+    .mainBlock__article{
+        margin-top: 10px;
+    }
+
+    
     
 }
 @media only screen and (max-width: 480px) {
-    .article__input{
-        font-size: 30px;
-        height: 60px;
+    body{
+        max-height: 651px;
+    }
+    .OS{
+        font-size: 27px;
+        margin-top: 0;
+        
+        
+    }
+    .header__logo{
+        max-width: 30px;
+        max-height: 30px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__info--name{
+        font-size: 17px;
+        margin-top: 2px;
+    }
+    .info__links--a{
+        font-size: 13px;
+        margin-right: 4px;
+    }
+    .info__links--img{
+        height: 11px;
+    }
+    .mainBlock__article{
+        margin-top: 10px;
     }
     .article__button{
-        font-size: 40px;
+        font-size: 10px;
+        padding: 13px 17px;
+        margin-top: 37px;
     }
     .article__inputform{
-        margin-top: 50px;
+        margin-top: 10px;
     }
-    body{
-        background-color: white;
+    .mainBlock__article{
+        margin-top: 10px;
+    }
+    .info__links--a{
+        margin-right: 0;
+    }
+    .info__links--a{
+        font-size: 12px;
     }
 }
-@media only screen and (max-width: 320px) {
-    
-}
+
 
