@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FrontCloudCamp_test-assignment/static/css/main.c0a6270d.css",
-    "main.js": "/FrontCloudCamp_test-assignment/static/js/main.353f0d4f.js",
+    "main.css": "/FrontCloudCamp_test-assignment/static/css/main.dd7f79d3.css",
+    "main.js": "/FrontCloudCamp_test-assignment/static/js/main.ada4200b.js",
     "static/js/787.28cb0dcd.chunk.js": "/FrontCloudCamp_test-assignment/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/FrontCloudCamp_test-assignment/index.html",
-    "main.c0a6270d.css.map": "/FrontCloudCamp_test-assignment/static/css/main.c0a6270d.css.map",
-    "main.353f0d4f.js.map": "/FrontCloudCamp_test-assignment/static/js/main.353f0d4f.js.map",
+    "main.dd7f79d3.css.map": "/FrontCloudCamp_test-assignment/static/css/main.dd7f79d3.css.map",
+    "main.ada4200b.js.map": "/FrontCloudCamp_test-assignment/static/js/main.ada4200b.js.map",
     "787.28cb0dcd.chunk.js.map": "/FrontCloudCamp_test-assignment/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0a6270d.css",
-    "static/js/main.353f0d4f.js"
+    "static/css/main.dd7f79d3.css",
+    "static/js/main.ada4200b.js"
   ]
 }
