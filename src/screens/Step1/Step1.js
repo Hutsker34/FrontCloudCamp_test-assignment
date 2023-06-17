@@ -40,6 +40,7 @@ function Step1(){
         setStep1(false)
         setStep2(false)
         setStep3(true)
+        
         setProgressbarSecond(true);
     }
 
@@ -63,11 +64,6 @@ function Step1(){
     }
 
 
-    
-
-   
-
-
 
     return(
         <div className='site'>
@@ -79,7 +75,9 @@ function Step1(){
                         <div className='progressbar__ball second--ball' style={{ 
                             border: progressbarFirst ? '6px solid #5558FA' : 'none', 
                             backgroundColor: progressbarFirst ? 'white' : '#A6A6A6' ,
-                            width: progressbarFirst ? '14px' : '16px' ,
+                            width: progressbarFirst ? '15px' : '16px' ,
+                            
+                            
                             }}>
     
                         </div>
@@ -112,6 +110,7 @@ function Step1(){
                         <div className='progressbar__ball third--ball' 
                             style={{ border: progressbarSecond ? '6px solid #5558FA' : 'none', 
                             backgroundColor: progressbarSecond ? 'white' : '#A6A6A6' ,
+                            width: progressbarSecond ? '15px' : '16px' ,
                             
                             }}>
 
@@ -120,7 +119,7 @@ function Step1(){
                         <div className='progressbar__ball third--ball' 
                             style={{ border: progressbarSecond ? '7px solid #5558FA' : 'none', 
                             backgroundColor: progressbarSecond ? 'white' : '#A6A6A6' ,
-                            height: progressbarFirst ? '17px' : '16px' ,
+                            height: progressbarSecond ? '17px' : '16px' ,
                             }}>
 
                         </div>
@@ -248,11 +247,11 @@ function Step1(){
                             <label className='article__text--label'>About</label>
                             <textarea placeholder='placeholder' className='article__text--textarea' ></textarea>
                         </div>
-                        <div className='mainBlock__buttons step3--buttons'>
-                            <div onClick={showStep2} className='article__button article__button--back' id="button-start" >
+                        <div className='mainBlock__buttons '>
+                            <div onClick={showStep2} className='article__button article__button--back button__back--step3' id="button-start" >
                                 назад
                             </div>
-                            <div  className='article__button' id="button-start">
+                            <div  className='article__button button__submit--step3' id="button-start">
                                 Отправить
                             </div>
                         </div>
