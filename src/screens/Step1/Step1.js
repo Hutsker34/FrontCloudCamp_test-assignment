@@ -79,7 +79,7 @@ function Step1(){
                         <div className='progressbar__ball second--ball' style={{ 
                             border: progressbarFirst ? '6px solid #5558FA' : 'none', 
                             backgroundColor: progressbarFirst ? 'white' : '#A6A6A6' ,
-                            
+                            width: progressbarFirst ? '14px' : '16px' ,
                             }}>
     
                         </div>

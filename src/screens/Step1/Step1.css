@@ -353,6 +353,9 @@
 }
 
 @media only screen and (max-width: 480px){
+    .progressbar__part{
+        height: 7px;
+    }
     .mainBlock__article{
         margin-top: 10px;
     }
@@ -369,15 +372,11 @@
     .article__input{
         font-size: 11px;
     }
-    .progressbar__ball{
+    
+    .first__ball{
         height: 14px;
         width: 14px;
         border: 6px solid #5558FA;
-    }
-    .second--ball{
-        height: 14px;
-        width: 16px;
-        
     }
     .third--ball{
         height: 14px;
