@@ -33,7 +33,7 @@ function Main(){
                 <article className='mainBlock__article'>
                     <div className='article__inputform'>
                         <label className='article__label'>Номер телефона</label>
-                        <input placeholder='+7 981 256-56-69' className='article__input'></input>
+                        <input  placeholder='+7 981 256-56-69' className='article__input'></input>
                     </div>
                     <div className='article__inputform'>
                         <label className='article__label'>email</label>

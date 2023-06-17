@@ -213,7 +213,7 @@
 }
 .progressbar__ball{
     width: 24px;
-    height: 22px;
+    height: 24px;
     background: #A6A6A6;
     border-radius: 50%;
     box-sizing: border-box;
@@ -231,7 +231,7 @@
 @media only screen and (max-width: 1600px) {
     
     .progressbar__ball{
-        width: 22px;
+        width: 24px;
     }
     .mainBlock--step1{
         padding: 80px 140px 100px 140px;
@@ -263,6 +263,17 @@
     .article__button {
         margin: 0 50px;
     }
+    .checkbox__group{
+        padding: 30px 0px 0 50px;
+        margin-top: 0;
+    }
+    .second--ball{
+        width: 25px;
+        
+    }
+    .third--ball{
+        width: 25px;
+    }
 }
 @media only screen and (max-width: 992px) {
     .article__inputform {
@@ -281,24 +292,99 @@
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         border: 7px solid #5558FA;
+        
     }
-    .second--ball{
-        height: 17px;
-        width: 17px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        border: 7px solid #5558FA;
+    .progressbar__part{
+        height: 9px;
+    }
+    .input__wrap{
+        width: 90%;
+    }
+    .input__wrap--img{
+        height: 23px;
+        margin-right: 10px;
+    }
+    .add__input{
+        width: 50px;
+        height: 50px;
+        font-size: 34px;
+        margin-top: 30px;
+    }
+    .checkbox__group{
+        padding: 30px 0px 0 50px;
+        margin-top: 0;
+    }
+    .article__button{
+        font-size: 13px;
+        padding: 17px 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     
-}
-@media only screen and (max-width: 480px){
-    .mainBlock__article{
-        margin-top: 10px;
+    .select-selected{
+        max-width: 80%;
+        height: 19px;
+        font-size: 14px;
+        padding: 11px 12px 10px 12px;
+    }
+    .select-selected--chevron{
+        margin-top: 0;
+    }
+    .mainBlock__buttons{
+        margin-top: 20px;
     }
 }
 @media only screen and (max-width: 650px) {
     .mainBlock__article{
         margin-top: 30px;
+    }
+    .checkbox__group{
+        padding-left: 50px;
+    }
+    .second--ball{
+        height: 14px;
+        width: 17px;
+        
+    }
+    .third--ball{
+        height: 14px;
+        width: 17px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .mainBlock__article{
+        margin-top: 10px;
+    }
+    .article__button {
+        margin: 10px 0 10px 20px;
+        padding: 10px 10px;
+    }
+    .article__inputform{
+        padding-left: 20px;
+    }
+    .article__label{
+        font-size: 12px;
+    }
+    .article__input{
+        font-size: 11px;
+    }
+    .progressbar__ball{
+        height: 14px;
+        width: 14px;
+        border: 6px solid #5558FA;
+    }
+    .second--ball{
+        height: 14px;
+        width: 16px;
+        
+    }
+    .third--ball{
+        height: 14px;
+        width: 16px;
+    }
+    .checkbox__group{
+        padding: 30px 0px 0 20px;
+        margin-top: 0;
     }
 }
