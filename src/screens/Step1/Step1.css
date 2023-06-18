@@ -104,6 +104,7 @@
     background-color: #fff;
     justify-content: center;
     border-radius: 4px;
+    cursor: pointer;
 }
 .input__wrap--img{
     margin: 10px 0 0 20px;
@@ -225,6 +226,10 @@
 .first__ball{
     background-color: #fff;
 }
+.article__text--letterscounter{
+    width: 100%;
+    text-align: end;
+}
 
 
 
@@ -277,8 +282,29 @@
     .article__text{
         padding-left: 50px;
     }
+    .select-items {
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 200px;
+        overflow-y: auto;
+        text-align: initial;
+      }
 }
 @media only screen and (max-width: 992px) {
+    .select-items{
+        max-width: 80%;
+        padding: 0px 12px 0px 12px;
+    }
+    .select-item{
+        
+        padding: 5px 12px 5px 12px;
+    }
     .article__inputform {
         width: 100%;
     }
@@ -300,9 +326,7 @@
     .progressbar__part{
         height: 9px;
     }
-    .input__wrap{
-        width: 90%;
-    }
+    
     .input__wrap--img{
         height: 23px;
         margin-right: 10px;
@@ -342,7 +366,7 @@
     .article__text--textarea{
         width: 100%;
     }
-    .mainBlock__buttons{
+    .mainBlock__buttons--step3{
         display: flex;
         justify-content: flex-start;
     }
@@ -370,6 +394,9 @@
 }
 
 @media only screen and (max-width: 480px){
+    .article__text--textarea{
+        font-size: 14px;
+    }
     .progressbar__part{
         height: 7px;
     }
@@ -415,5 +442,12 @@
     }
     .progressbar{
         padding: 10px 20px;
+    }
+    .article__text--letterscounter{
+        font-size: 14px;
+    }
+    .select-items{
+        max-width: 80%;
+        padding: 0px 12px 0px 12px;
     }
 }
