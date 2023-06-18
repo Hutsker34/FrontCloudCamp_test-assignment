@@ -56,7 +56,7 @@ export const step1slice = createSlice({
         }
     },
         setMainScreen: (state, {payload}) => {
-            state.mainScreen = {...payload}
+            state.mainScreen = payload
     },
         setAdvantages: (state, {payload}) => {
             state.step2.advantages = payload

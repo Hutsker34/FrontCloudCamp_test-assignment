@@ -9,6 +9,7 @@ import { setStep2Info } from './step1slice';
 import { setStep3Info } from './step1slice';
 import { openModal } from './step1slice';
 import Modalka from '../../components/Modalka/Modalka';
+import axios from 'axios';
 
 function Step1(){
     const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,8 @@ function Step1(){
     const [isValid, setIsValid] = useState(true)
     const [isNameValid, setIsNameValid] = useState(true)
     const [isSurnameValid, setIsSurnameValid] = useState(true)
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
     
 
     const dispatch = useDispatch()
@@ -38,6 +41,7 @@ function Step1(){
     const maxWidth480 = useMediaQuery('(max-width: 480px)');
     const options = ['Man', 'Woman'];
     const advantages = useSelector((state) => state.step1slice.step2.advantages)
+    const data = useSelector((state) => state.step1slice.userData)
     const count = text.replace(/\s/g, '').length;
 
     function setStep1Nickname(e){
@@ -84,9 +88,21 @@ function Step1(){
         dispatch(addAdvantages())
     }
     function setAllInfo(){
-        dispatch(setUserData())
+        console.log(data)
+        axios.post(`https://api.sbercloud.ru/content/v1/bootcamp/frontend`,{
+            data
+        })
+        .then(() => {
+            setSuccess(true);
+            setError(false);
+        })
+        .catch((err) => {
+            setSuccess(false);
+            setError(true);
+        });
         dispatch(openModal())
     }
+    
 
     function setStep1Information(){
         dispatch(setStep1Info({
@@ -170,15 +186,13 @@ function Step1(){
         setProgressbarSecond(true);
     }
 
-    
-    
-    
 
     function handleChange(event) {
         setText(event.target.value);
         dispatch(setStep3Info({
             about: text,
         }))
+        dispatch(setUserData())
     }
 
     const handleOptionClick = (option) => {
@@ -227,6 +241,7 @@ function Step1(){
                             }}>
     
                         </div>
+                        
                     ) : maxWidth650 ? (
                         <div className='progressbar__ball second--ball' style={{ 
                             border: progressbarFirst ? '7px solid #5558FA' : 'none', 
@@ -291,21 +306,21 @@ function Step1(){
                         <div className='article__inputform'>
                             <label className='article__label'>Nickname</label>
                             <input maxLength={30} value={nickname} onChange={setStep1Nickname} id='field-nickname' placeholder='placeholder' className='article__input input-step1'/>
-                            {!isValid && <p style={{ color: 'red' }}>Допустимы только буквы и цифры</p>}
+                            {!isValid && <p className='error__message'>Допустимы только буквы и цифры</p>}
                         </div>
                         <div className='article__inputform'>
                             <label className='article__label'>Name</label>
                             <input maxLength={50} value={name} onChange={setStep1Name} id='field-name' placeholder='placeholder' className='article__input input-step1'/>
-                            {!isNameValid && <p style={{ color: 'red' }}>Допустимы только буквы</p>}
+                            {!isNameValid && <p className='error__message'>Допустимы только буквы</p>}
                         </div>
                         <div className='article__inputform'>
                             <label className='article__label'>Surname</label>
                             <input value={surname} onChange={setstep1Surname} id='field__sername' placeholder='placeholder' className='article__input input-step1'/>
-                            {!isSurnameValid && <p style={{ color: 'red' }}>Допустимы только буквы</p>}
+                            {!isSurnameValid && <p className='error__message'>Допустимы только буквы</p>}
                         </div>
                         <div className='article__inputform '>
                             <label className='article__label'>Sex</label>
-                            <div className="custom-select ">
+                            <div id='field-sex' className="custom-select ">
                                 <div  className="select-selected " onClick={handleSelectClick}>
                                     {selectedOption}
                                     <span className='select-selected--chevron'>&#709;</span>
@@ -322,13 +337,13 @@ function Step1(){
                                 назад
                             </Link>
                             {isNameValid && isSurnameValid && isValid && name !== '' && surname !== '' && nickname !== '' && selectedOption !== 'Не выбрано'? (
-                                    <Link  onClick={showStep2} className='article__button' id="button-start" to="/create">
+                                    <div  onClick={showStep2} className='article__button' id="button-next" >
                                         Далее
-                                    </Link>
+                                    </div>
                                 ) : (
-                                    <Link onClick={helpUser} className='article__button' id="button-start" >
+                                    <div onClick={helpUser} className='article__button' id="button-next" >
                                         Далее
-                                    </Link>
+                                    </div>
                                 )
                             }
                         </div>
@@ -340,9 +355,9 @@ function Step1(){
                         <div className='article__inputform'>
                             <label className='article__label'>Advantages</label>
                             {advantages.map((item,index)=> {
-                                return <Advantage removeAdvantage={removeAdvantage}  setAdvantage={setAdvantage} id={index}  {...item} key={index}/>
+                                return <Advantage  removeAdvantage={removeAdvantage} setAdvantage={setAdvantage} id={index} text={item} key={index} />
                             })}
-                            <div onClick={addAdvantage} className=' add__input'>+</div>
+                            <div onClick={addAdvantage} id='button-add' className='add__input'>+</div>
                         </div>
                         <div className='article__checkboxes'>
                             <div className='checkbox__group'>
@@ -397,18 +412,18 @@ function Step1(){
                     <div className='mainBlock__article'>
                         <div className='article__text'>
                             <label className='article__text--label'>About</label>
-                            <textarea value={text} onChange={handleChange} maxLength={200} placeholder='placeholder' className='article__text--textarea' ></textarea>
+                            <textarea value={text} onChange={handleChange} maxLength={200} placeholder='placeholder' id='field-about' className='article__text--textarea' ></textarea>
                             <div className='article__text--letterscounter'>{count} символов</div>
                         </div>
                         <div className='mainBlock__buttons mainBlock__buttons--step3'>
-                            <div onClick={showStep2} className='article__button article__button--back button__back--step3' id="button-start" >
+                            <div onClick={showStep2} className='article__button article__button--back button__back--step3' id="button-back" >
                                 назад
                             </div>
-                            <div onClick={setAllInfo} className='article__button button__submit--step3' id="button-start">
+                            <div onClick={setAllInfo} className='article__button button__submit--step3' id="button-send">
                                 Отправить
                             </div>
                         </div>
-                        <Modalka modalOpen = {() => dispatch((openModal()))} />
+                        <Modalka error={error} success={success} modalOpen = {() => dispatch((openModal()))} />
                     </div>
                     
                 }

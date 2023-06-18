@@ -141,6 +141,9 @@ body{
 }
 
 @media only screen and (max-width: 1200px) {
+    .error__message{
+        font-size: 14px;
+    }
     .mainBlock{
         max-width: 800px;
         
@@ -200,6 +203,9 @@ body{
     
 }
 @media only screen and (max-width: 650px) {
+    .error__message{
+        font-size: 12px;
+    }
     .mainBlock__article{
         margin-top: 30px;
     }
@@ -241,6 +247,9 @@ body{
     
 }
 @media only screen and (max-width: 480px) {
+    .error__message{
+        font-size: 10px;
+    }
     body{
         max-height: 651px;
     }

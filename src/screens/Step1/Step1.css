@@ -9,6 +9,11 @@
     border-radius: 24px;
     background-color: #fff;
 }
+.page__number{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 .mainBlock__buttons{
     display: flex;
 }
@@ -213,7 +218,7 @@
     right: 5px;
 }
 .progressbar__ball{
-    width: 24px;
+    width: 25px;
     height: 24px;
     background: #A6A6A6;
     border-radius: 50%;

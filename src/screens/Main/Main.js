@@ -82,7 +82,9 @@ function Main(){
                                 <img className='info__links--img' src={vector}/>
                                 GitHub
                             </a>
-                            <a className='info__links--a' href="https://www.google.com">
+
+                            <a className='info__links--a'  href="">
+                                {/* I don't have a resume :(     */}
                                 <img className='info__links--img' src={vector}/>
                                 Resume
                             </a>
@@ -93,7 +95,7 @@ function Main(){
                     <div className='article__inputform'>
                         <label className='article__label'>Номер телефона</label>
                         <input maxLength={11} value={phone} onChange={handleInputChange} placeholder='+7 999 999 99 99' className='article__input article__input--phone'></input>
-                        {!phoneError && <p style={{ color: 'red' }}>Некорректный номер телефона</p>}
+                        {!phoneError && <p className='error__message'>Некорректный номер телефона</p>}
                     </div>
                     <div className='article__inputform'>
                         <label className='article__label'>email</label>
